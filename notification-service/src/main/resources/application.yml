@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: notification-service
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+rabbit:
+  queue:
+    name: direct_queue
+  exchange:
+    name: direct_exchange
+  routing:
+    key: user.created.v1
+
+server:
+  port: 8081

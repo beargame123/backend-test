@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: user-service
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+    mongodb:
+      uri: mongodb://localhost:27017/ure?retryWrites=false
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  graphql:
+    graphiql:
+      enabled: true
+    cors:
+      allowed-origins: "*"
+      allowed-headers: "*"
+      allowed-methods: "*"
+
+rabbit:
+  exchange:
+    name: direct_exchange
+  routing:
+    key: user.created.v1
+
+server:
+  port: 8080
+

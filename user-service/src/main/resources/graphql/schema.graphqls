@@ -1,0 +1,24 @@
+type User {
+    userId: ID!
+    name: String!
+    email: String!
+}
+
+input CreateUserRequest {
+    name: String!
+    email: String!
+}
+
+type UserInfoResponse {
+    userId: ID!
+    name: String!
+    email: String!
+}
+
+type Query {
+    getUser(userId: ID!): UserInfoResponse
+}
+
+type Mutation {
+    createUser(input: CreateUserRequest!): UserInfoResponse
+}
